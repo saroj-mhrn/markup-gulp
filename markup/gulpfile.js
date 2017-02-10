@@ -24,12 +24,12 @@ elixir.config.css.autoprefix.options.browsers.push("last 5 versions");
 
 elixir(function(mix) {
 
-    mix.sass('project.scss','assets/compiled/css/project.css');
+    mix.sass('theme.scss','assets/compiled/css/theme.css');
 
     mix.scripts([
         'plugins/jquery-1.11.2.min.js',
         'plugins',
         'custom'
-    ], 'assets/compiled/js/project.js');
+    ], 'assets/compiled/js/theme.js');
 
 });
