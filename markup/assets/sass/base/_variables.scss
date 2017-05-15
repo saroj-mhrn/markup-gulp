@@ -8,7 +8,7 @@ $black: #333;
 $white: #fff;
 $light-blue: #39f;
 
-$helvetica : 'Helvetica Neue', 'Arial', 'Helvetica', sans-serif
+$helvetica: 'Helvetica Neue', 'Arial', 'Helvetica', sans-serif;
 $base-font-sans-serif: $helvetica;
 $base-font-serif: 'Times New Roman', 'Times', 'Baskerville', 'Georgia', serif;
 
@@ -53,6 +53,7 @@ $headings-color: inherit !default;
 $animation-speed: 0.3s;
 
 // grid 
+$usegrid: true;
 $gutter-width: 30px;  // gutter for desktop greater than 768
 $gutter-width-mobile: 30px;  // gutter for mobiles
 $container-width: 930px;
