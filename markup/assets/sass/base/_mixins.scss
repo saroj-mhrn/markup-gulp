@@ -1,6 +1,6 @@
-// ---------------------------------------------------------
+// ---------------------------------------------------------===
 // Mixins
-// ---------------------------------------------------------
+// ---------------------------------------------------------===
 
 // vertical align el inside parent with fixed height/min-height
 // usage 
@@ -52,12 +52,24 @@
 
 
 // vertical align el
-// usage: @include vertical-align-el;
-//
-@mixin vertical-align-el {
-    position: relative;
-    top: 50%;
-    transform: translateY(-50%);
+// usage: @include box-align(vhc); (vertical and horizontally center)
+// usage: @include box-align(vc); (only vertical center)
+// usage: @include box-align(hc); (only horizontal center)
+
+@mixin box-align($cond) {
+    position: absolute;
+
+    @if ($cond == vhc) {
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+    } else if ($cond ==  vc) {
+        top: 50%;
+        transform: translateY(-50%);
+    } else if ($cond == hc) {
+        left: 50%;
+        transform: translateX(-50%);
+    }
 }
 
 /// Mixin helping defining both `width` and `height` simultaneously.
@@ -229,6 +241,18 @@ $animation-speed: .3s !default;
 }
 
 
+/// Font-size px to rem calc
+/// @example scss - Usage
+/// selector {
+    ///    @include rem-font-size(16px);
+/// }
+
+@mixin rem-font-size($pxSize) {
+    font-size: $pxSize;
+    font-size: ($pxSize / 10px) + rem;
+}
+
+
 /// Mixin for styling form-placeholders
 /// @example scss - Usage
 ///   @include placeholder {
@@ -249,15 +273,4 @@ $animation-speed: .3s !default;
     &:-moz-placeholder {@content}
     &:-ms-input-placeholder {@content}
     &.placeholder {@content}
-}
-
-/// Font-size px to rem calc
-/// @example scss - Usage
-/// selector {
-    ///    @include rem-font-size(16px);
-/// }
-
-@mixin rem-font-size($pxSize) {
-    font-size: $pxSize;
-    font-size: ($pxSize / 10px) + rem;
 }

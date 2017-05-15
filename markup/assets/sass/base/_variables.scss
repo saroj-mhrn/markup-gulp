@@ -1,17 +1,15 @@
-// ---------------------------------------------------------
+// ---------------------------------------------------------===
 // Variables
-// ---------------------------------------------------------
+// ---------------------------------------------------------===
 
 // Colors
-// Color calculator - http://razorjam.github.io/sasscolourfunctioncalculator/
-// Color names - http://name-of-color.com/
-
 $gray: #999;
 $black: #333;
 $white: #fff;
 $light-blue: #39f;
 
-$base-font-sans-serif: 'Arial', 'Helvetica Neue', 'Helvetica', sans-serif;
+$helvetica : 'Helvetica Neue', 'Arial', 'Helvetica', sans-serif
+$base-font-sans-serif: $helvetica;
 $base-font-serif: 'Times New Roman', 'Times', 'Baskerville', 'Georgia', serif;
 
 // Body
@@ -53,3 +51,9 @@ $headings-color: inherit !default;
 
 
 $animation-speed: 0.3s;
+
+// grid 
+$gutter-width: 30px;  // gutter for desktop greater than 768
+$gutter-width-mobile: 30px;  // gutter for mobiles
+$container-width: 930px;
+$grid-count: 12;
