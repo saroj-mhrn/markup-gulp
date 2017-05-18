@@ -48,8 +48,6 @@
     }
 }
 
-
-
 /// * Helper class to truncate and add ellipsis to a string too long for it to fit
 /// * on a single line.
 /// * 1. Prevent content from wrapping, forcing it on a single line.
@@ -59,4 +57,10 @@
     white-space: nowrap; /* 1 */
     text-overflow: ellipsis; /* 2 */
     overflow: hidden;
+}
+
+// Reset image
+%img-reset {
+    display: block;
+    width: 100%;
 }
