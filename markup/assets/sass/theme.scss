@@ -32,3 +32,7 @@ $media-expressions: (
 @import 'base/forms';
 
 @import 'vendors/grid';
+
+@import 'layouts/header';
+@import 'layouts/common';
+@import 'layouts/footer';

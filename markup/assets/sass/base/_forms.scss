@@ -18,16 +18,14 @@ input[type='url'],
 input[type='date'],
 textarea {
     -webkit-appearance: none;
-    -webkit-border-radius: 0;
+    -webkit-border-radius: $form-border-radius;;
+    border-radius: $form-border-radius;
     box-sizing: border-box;
     border: 1px solid $form-element-border-color;
     padding: $form-element-padding;
 
-    // &:hover {
-        
-    // }
-
-    &:focus {
+    &:focus,
+    &:hover {
         border-color: $form-element-focus-border-color;
     }
 
@@ -37,7 +35,7 @@ textarea {
 }
 
 select {
-    -webkit-border-radius: 0;
+    -webkit-border-radius: $form-border-radius;;
 }
 
 textarea {
@@ -51,6 +49,6 @@ input[type='reset'],
 input[type='file'],
 input[type='submit'] {
     -webkit-appearance: none;
-    -webkit-border-radius: 0;
+    -webkit-border-radius: $form-border-radius;;
     cursor: pointer;
 }

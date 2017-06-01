@@ -2,28 +2,30 @@
 // General resets
 // ---------------------------------------------------------===
 
+html,
+body { height: 100%; }
 html {
-	box-sizing: border-box;
+    box-sizing: border-box;
 }
 *, *:before, *:after {
-	box-sizing: inherit;
+    box-sizing: inherit;
 }
 
 * {max-height: 1000000px;}
 
 body {
-	color: $base-text-color;
-	background: $base-background-color;
-	font: #{$font-size-base}/#{$line-height-base} $base-font-family;
-	min-width: $base-min-width;
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
+    color: $base-text-color;
+    background: $base-background-color;
+    font: #{$font-size-base}/#{$line-height-base} $base-font-family;
+    min-width: $base-min-width;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
 // adaptive images
 img {
-	max-width: 100%;
-	height: auto;
+    max-width: 100%;
+    height: auto;
 }
 
 // google map fix
@@ -35,4 +37,11 @@ img {
         cursor:default;
         pointer-events:none;
     }
+}
+
+// wrapper
+#wrapper {
+    width: 100%;
+    position: relative;
+    overflow: hidden;
 }
