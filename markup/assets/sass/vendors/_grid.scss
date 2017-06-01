@@ -46,6 +46,7 @@
         @include make-gutter($gutter-width);
         position: relative;
         min-height: 1px;
+        width: 100%;
     }
 
     @for $i from (1) through $grid-count {
